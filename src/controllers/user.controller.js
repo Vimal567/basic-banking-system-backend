@@ -9,6 +9,15 @@ const getAllUsers = async (req, res) => {
   }
 };
 
+const getTransactions = async (req, res) => {
+  try {
+    const data = await userService.getTransactions();
+    res.status(200).send(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const transfer = async (req, res) => {
   try {
     const payload = req.body;
@@ -22,4 +31,5 @@ const transfer = async (req, res) => {
 module.exports = {
   getAllUsers,
   transfer,
+  getTransactions
 };
