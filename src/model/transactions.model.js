@@ -11,6 +11,11 @@ const transactionsSchema = mongoose.Schema({
     required: true,
     trim: true,
   },
+  amount: {
+    type: Number,
+    required: true,
+    trim: true,
+  },
   date: {
     type: String,
     required: true

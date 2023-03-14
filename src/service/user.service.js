@@ -25,6 +25,7 @@ const transfer = async (payload) => {
   const newTransaction = {
     from: user1[0].name,
     to: user2[0].name,
+    amount: amount,
     date: today,
   };
   const transactionDone = new Transactions(newTransaction);
